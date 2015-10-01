@@ -1,0 +1,47 @@
+<template name="Home">
+	<header id="homepage_header">
+		<!-- <h1 class="logo">mickeybook</h1> -->
+		<img src="/mickeybook.png" alt="" class="logo" />
+		<span id="login_form">
+			<button id="login">Log In</button>
+			<div id="password">
+				<p>
+					Password
+				</p>
+				<input type="password" id="login_password">
+			</div>
+			<div id="email">
+				<p>
+					Email
+				</p>
+				<input type="text" id="login_email">
+			</div>
+		</span>
+	</header>
+	<span id="body_left">
+		<div id="about">
+			<h2>Connect with the Mickey
+				<br>around you on Mickeybook.</h2>
+			<p><b>See photos and updates</b> from Mickey in the news feed</p>
+			<p><b>Share what's new</b> in your life on Mickey's Timeline</p>
+			<p><b>Find more</b> of Mickey</p>
+		</div>
+	</span>
+	<span id="body_right">
+		<h2>Sign Up</h2>
+		<p>It's Free (for now)</p>
+		<input type="text" placeholder="First Name" id="fname_field">
+		<input type="text" placeholder="Last Name" id="lname_field">
+		<br>
+		<input type="text" placeholder="Email" id="email_field">
+		<br>
+		<input type="password" placeholder="New Password" id="password_field">
+		<br>
+		<input type="radio" name="sex" value="male">Male
+		<input type="radio" name="sex" value="female">Female
+		<input type="radio" name="sex" value="mickey">Mickey
+		<p class="fine_print">By clicking Sign Up you agree to sell your soul to mickey and pledge
+			<br> allegience to his army of giant walking penises</p>
+		<button id="sign_up">Sign Up</button>
+	</span>
+</template>
