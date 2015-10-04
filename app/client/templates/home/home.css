@@ -6,7 +6,7 @@
 #homepage_header {
 	background-color: #3B5998;
 	height: 5em;
-	line-height: 5em;
+	/*line-height: 5em;*/
 	width: 100%;
 	color: white;
 }

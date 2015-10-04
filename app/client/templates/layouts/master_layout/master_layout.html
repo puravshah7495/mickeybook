@@ -1,3 +1,29 @@
 <template name="MasterLayout">
+	{{#if currentUser}}
+		<header class="profile_header">
+			<p>placeholder</p>
+			<a href="#" id="logout">Log Out</a>
+		</header>
+	{{else}}
+		<header id="homepage_header">
+			<!-- <h1 class="logo">mickeybook</h1> -->
+			<img src="/mickeybook.png" alt="" class="logo" />
+			<form id="login_form">
+				<button id="login" type="submit">Log In</button>
+				<div id="email">
+					<p>
+						Email
+					</p>
+					<input type="text" id="login_email">
+				</div>
+				<div id="password">
+					<p>
+						Password
+					</p>
+					<input type="password" id="login_password">
+				</div>
+			</form>
+		</header>
+	{{/if}}
   {{> yield}}
 </template>
