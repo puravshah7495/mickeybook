@@ -13,3 +13,15 @@ body, html {
 h1 {
 	margin: 0;
 }
+.profile_header a {
+	color: white;
+	text-decoration: none;
+}
+.pull-right {
+	float: right;
+}
+.nav_items {
+	position: relative;
+	float: right;
+	margin-right: 25em;
+}

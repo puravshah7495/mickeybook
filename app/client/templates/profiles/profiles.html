@@ -1,5 +1,39 @@
 <template name="Profiles">
-	<div id="cover_image">
+	<div id="main_content">
+		<div id="content_head">
+			<div id="profile_thumb">
+				<img src="/mickeyprofile.jpg" alt="" id="profile_image" />
+			</div>
+			<div id="cover_image">
 
+			</div>
+			<div id="head_controls">
+				<div id="controls">
+					<a href="#"><span>Timeline</span></a>
+					<a href="#"><span>About</span></a>
+					<a href="#"><span>Friends</span></a>
+					<a href="#"><span>Photos</span></a>
+				</div>
+			</div>
+		</div>
+		<div id="content_body">
+			{{>Template.dynamic template=template}}
+		</div>
 	</div>
+</template>
+
+<template name="Timeline">
+
+</template>
+
+<template name="About">
+
+</template>
+
+<template name="Friends">
+
+</template>
+
+<template name="Photos">
+
 </template>

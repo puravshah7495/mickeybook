@@ -1,8 +1,9 @@
 <template name="MasterLayout">
 	{{#if currentUser}}
 		<header class="profile_header">
-			<p>placeholder</p>
-			<a href="#" id="logout">Log Out</a>
+			<span class="nav_items">
+				<a href="#" id="logout" class="pull-right">Log Out</a>
+			</span>
 		</header>
 	{{else}}
 		<header id="homepage_header">
