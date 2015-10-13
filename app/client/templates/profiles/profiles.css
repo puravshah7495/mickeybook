@@ -96,7 +96,27 @@
 .post_head {
 	height: 4em;
 }
+.post_head p {
+	display: inline;
+}
 .reply textarea {
 	width: 20%;
 	margin-top: .5em;
+}
+.post_dropdown button{
+	border: none;
+}
+.post_dropdown .glyphicon-chevron-down {
+	color: gray;
+	font-size: 70%;
+}
+header .dropdown-toggle {
+	background-color: #3B5998;
+	height: 2.9em;
+	font-color: #0D3850;
+}
+header .caret {
+	border-top: 7px solid #0D3850;
+	border-right: 7px solid transparent;
+	border-left: 7px solid transparent;
 }

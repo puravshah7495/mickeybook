@@ -1,9 +1,18 @@
 <template name="MasterLayout">
 	{{#if currentUser}}
-		<header class="profile_header">
-			<span class="nav_items">
-				<a href="#" id="logout" class="pull-right">Log Out</a>
-			</span>
+		<header class="profile_header navbar-fixed-top">
+			<ul class="nav navbar-nav nav_items">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#" id="logout">Log Out</a></li>
+            <li><a href="#">Settings</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Help</a></li>
+						<li><a href="#">Report a Problem</a></li>
+          </ul>
+        </li>
+      </ul>
 		</header>
 	{{else}}
 		<header id="homepage_header">
@@ -26,5 +35,7 @@
 			</form>
 		</header>
 	{{/if}}
-  {{> yield}}
+	<div class="yield_container">
+		{{> yield}}
+	</div>
 </template>

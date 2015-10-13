@@ -12,6 +12,10 @@
 }
 header input {
 	width: 144px;
+	color: black;
+}
+header button {
+	color: black;
 }
 .logo {
 	/*margin-left: 15%;

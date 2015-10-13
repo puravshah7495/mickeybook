@@ -38,6 +38,17 @@
 			<div class="post">
 				<div class="post_head">
 					<p>{{username postedBy}}</p>
+					<div class="dropdown post_dropdown pull-right" >
+					  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					    <span class="glyphicon glyphicon-chevron-down"></span>
+					  </button>
+					  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					    <li><a href="#">Edit Post</a></li>
+					    <li><a href="#">Change Date</a></li>
+							<li role="separator" class="divider"></li>
+					    <li><a href="#" id="delete_post">Delete</a></li>
+					  </ul>
+					</div>
 				</div>
 				<p>{{message}}</p>
 				<div class="reply">

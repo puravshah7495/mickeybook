@@ -19,9 +19,17 @@ h1 {
 }
 .pull-right {
 	float: right;
+	clear: both;
+}
+.pull-left {
+	float: left;
+	clear: both;
 }
 .nav_items {
 	position: relative;
 	float: right;
 	margin-right: 25em;
+}
+.yield_container {
+	margin-top: 3em;
 }

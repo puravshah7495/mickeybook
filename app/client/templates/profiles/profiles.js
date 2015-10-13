@@ -15,6 +15,12 @@ Template.Timeline.events({
 		});
 		messageInput.value = "";
 		return false;
+	},
+
+	'click #delete_post': function(event, x, y) {
+		console.log(x);
+		console.log(y);
+		return false;
 	}
 });
 
@@ -34,7 +40,7 @@ Template.Profiles.helpers({
 
 Template.Timeline.helpers({
 	posts: function() {
-		return Posts.find();
+		return Posts.find({}, {sort: {datePosted: -1}});
 	},
 	username: function(id) {
 		var user = Meteor.users.findOne({_id: id});
