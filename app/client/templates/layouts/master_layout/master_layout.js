@@ -13,6 +13,7 @@ Template.MasterLayout.events({
       if (error) {
         console.log(error);
       } else {
+				Accounts.sendVerificationEmail(Meteor.userId());
         Router.go('/');
       }
     });

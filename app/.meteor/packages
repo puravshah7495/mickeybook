@@ -24,3 +24,5 @@ ejson
 spacebars
 check
 linto:jquery-ui
+momentjs:moment
+twbs:bootstrap

@@ -23,7 +23,29 @@
 </template>
 
 <template name="Timeline">
+	<div id="body_info">
+		&nbsp;
+	</div>
+	<div id="body_posts">
+		<div>
+			<form id="post_form">
+				<textarea id="post_input" rows="5" cols="40" placeholder="Write something..."></textarea>
+				<div><button type="submit" id="post_button">Post</button></div>
+			</form>
+		</div>
 
+		{{#each posts}}
+			<div class="post">
+				<div class="post_head">
+					<p>{{username postedBy}}</p>
+				</div>
+				<p>{{message}}</p>
+				<div class="reply">
+					<textarea rows="1" cols="35" class="reply_input"></textarea>
+				</div>
+			</div>
+		{{/each}}
+	</div>
 </template>
 
 <template name="About">

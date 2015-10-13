@@ -2,7 +2,20 @@
 /* Profiles: Event Handlers */
 /*****************************************************************************/
 Template.Profiles.events({
+});
 
+Template.Timeline.events({
+	'submit #post_form': function(event) {
+		var messageInput = document.getElementById('post_input');
+		var message = messageInput.value;
+		Posts.insert({
+			postedBy: Meteor.userId(),
+			message: message,
+			datePosted: new Date()
+		});
+		messageInput.value = "";
+		return false;
+	}
 });
 
 /*****************************************************************************/
@@ -19,6 +32,15 @@ Template.Profiles.helpers({
 	}
 });
 
+Template.Timeline.helpers({
+	posts: function() {
+		return Posts.find();
+	},
+	username: function(id) {
+		var user = Meteor.users.findOne({_id: id});
+		return user.profile.firstName + " " + user.profile.lastName;
+	}
+});
 /*****************************************************************************/
 /* Profiles: Lifecycle Hooks */
 /*****************************************************************************/
