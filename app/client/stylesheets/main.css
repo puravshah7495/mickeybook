@@ -10,6 +10,15 @@ body, html {
 	margin:0;
 	background-color: #dfe3ee;
 }
+
+.dropdown-toggle#dropdown-master:hover {
+	background-color: #3B5998;
+}
+
+.caret#dropdown-master:hover {
+	border-top: 7px solid #CCCCCC;
+}
+
 h1 {
 	margin: 0;
 }
