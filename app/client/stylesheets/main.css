@@ -10,7 +10,49 @@ body, html {
 	margin:0;
 	background-color: #dfe3ee;
 }
-
+#homepage_header {
+	background-color: #3B5998;
+	height: 5em;
+	/*line-height: 5em;*/
+	width: 100%;
+	color: white;
+}
+header input {
+	width: 144px;
+	color: black;
+}
+header button {
+	color: black;
+}
+.logo {
+	/*margin-left: 15%;
+	padding-top: .8em;
+	float: left;*/
+	float: left;
+	margin-left: 16.5%;
+}
+#email {
+	position: absolute;
+	margin-top: 1em;
+	top:0;
+	right: 737px;
+}
+#password {
+	position: absolute;
+	margin-top: 1em;
+	top:0;
+	right: 580px;
+}
+#login {
+	position: absolute;
+	margin-top: 32px;
+	top:0;
+	height: 24px;
+	right: 500px;
+}
+#login_form {
+	margin-right: 400px;
+}
 .dropdown-toggle#dropdown-master:hover {
 	background-color: #3B5998;
 }
@@ -37,8 +79,9 @@ h1 {
 .nav_items {
 	position: relative;
 	float: right;
-	margin-right: 25em;
+	margin-right: 520px;
 }
 .yield_container {
 	margin-top: 3em;
+	position: relative;
 }

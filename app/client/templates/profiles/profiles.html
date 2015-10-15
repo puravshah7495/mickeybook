@@ -5,8 +5,8 @@
 				<img src="/mickeyprofile.jpg" alt="" id="profile_image" />
 			</div>
 			<div id="cover_image">
-
 			</div>
+			<p id="profile_name">Mickey (Duyoohirwut) Ahir</p>
 			<div id="head_controls">
 				<div id="controls">
 					<a href="#"><span>Timeline</span></a>
@@ -20,24 +20,34 @@
 			{{>Template.dynamic template=template}}
 		</div>
 	</div>
+	<div id="ads">
+		<p>Sponsored</p>
+		<a href="/"><img src="/mickeyadgif.gif"/></a>
+		<a href="/"><img src="/mickeyad2.png"/></a>
+	</div>
 </template>
 
 <template name="Timeline">
 	<div id="body_info">
+		<div id="timeline_about" class="box">
+			<p>Studies BME at <a href="#">Stony Brook University</a></p><br>
+			<p>Lives in <a href="#">Patchogue, New York</a></p><br>
+			<p>Illegal Immigrant from <a href="#">India</a></p><br>
+			<p>Pronounces name May-tick-quoo-mare Ay-hire</p>
+		</div>
 		&nbsp;
 	</div>
 	<div id="body_posts">
-		<div>
+		<div class="box">
 			<form id="post_form">
 				<textarea id="post_input" rows="5" cols="40" placeholder="Write something..."></textarea>
-				<div><button type="submit" id="post_button">Post</button></div>
+				<div id="post_controls"><button type="submit" id="post_button">Post</button></div>
 			</form>
 		</div>
-
 		{{#each posts}}
-			<div class="post">
+			<div class="post box">
 				<div class="post_head">
-					<p>{{username postedBy}}</p>
+					<p>{{username postedBy}} <span class="glyphicon glyphicon-play"></span> Mickey Ahir</p>
 					<div class="dropdown post_dropdown pull-right" >
 					  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 					    <span class="glyphicon glyphicon-chevron-down"></span>
@@ -50,7 +60,14 @@
 					  </ul>
 					</div>
 				</div>
-				<p>{{message}}</p>
+				<div class="post_body">
+					<p>{{message}}</p>
+				</div>
+				<div class="post_bottom">
+					<hr>
+					<a href="#"><span class="glyphicon glyphicon-thumbs-up"></span> Mickey</a>
+					<a href="#"><span class="glyphicon glyphicon-thumbs-down"></span> Mickey</a>
+				</div>
 				<div class="reply">
 					<textarea rows="1" cols="35" class="reply_input"></textarea>
 				</div>

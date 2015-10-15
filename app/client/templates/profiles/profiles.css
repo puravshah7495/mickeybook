@@ -10,27 +10,46 @@
 	width: 100%;
 }
 #main_content {
-	width: 60%;
-	margin: auto;
+	width: 981px;
+	margin-left: 250px;
+	display: inline-block;
+}
+#ads {
+	position: fixed;
+	right:245px;
+	top: 3.2em;
+}
+#ads img {
+	display: block;
+	width: 260px;
+	height: 250px;
+	margin-bottom: 10px;
 }
 #content_head {
 	position: relative;
 	height: 358px;
 }
 #profile_thumb {
-	width: 177px;
-	height: 177px;
+	width: 174px;
+	height: 174px;
 	border: 1px solid gray;
 	border-radius: 3%;
 	position: absolute;
-	margin-top: 15%;
-	margin-left: 2.5%;
+	margin-top: 160px;
+	margin-left: 30px;
 }
 #profile_image {
 	width: 171px;
 	height: 171px;
 	border: 3px solid white;
 	border-radius: 3%;
+}
+#profile_name {
+	font-size: 160%;
+	color: white;
+	position: absolute;
+	left: 230px;
+	bottom: 70px;
 }
 #cover_image {
 	width: 100%;;
@@ -62,7 +81,6 @@
 	display: inline-block;
 	width: 34%;
 	height: 100%;
-	background-color: black;
 	float: left;
 }
 #body_posts {
@@ -84,6 +102,22 @@
 	position: relative;
 	padding: 1em;
 }
+.post .glyphicon-play {
+	font-size: 70%;
+	color: #a7a8a7;
+}
+.post_body {
+	 word-wrap: break-word;      /* IE */
+}
+.post_bottom {
+	font-size: 80%;
+	color: #626363;
+}
+.post_bottom a {
+	color: #626363;
+	text-decoration: none;
+	margin-right: 25px;
+}
 .reply{
 	background-color: #f6f7f8;
 	position: absolute;
@@ -91,17 +125,21 @@
 	left: 0;
 	width: 100%;
 	height: 3em;
-	border-top: 1px solid gray
 }
 .post_head {
-	height: 4em;
+	height: 40px;
 }
 .post_head p {
 	display: inline;
 }
+#post_controls {
+	background-color: #dcdee3;
+}
 .reply textarea {
 	width: 20%;
 	margin-top: .5em;
+	background-color: white;
+	border: none;
 }
 .post_dropdown button{
 	border: none;
@@ -119,4 +157,21 @@ header .caret {
 	border-top: 7px solid #0D3850;
 	border-right: 7px solid transparent;
 	border-left: 7px solid transparent;
+}
+#timeline_about {
+	padding: 10px;
+	margin: 0;
+	font-size: 80%;
+	background-color: white;
+}
+.box {
+	-moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  border-image: none;
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
 }

@@ -1,50 +1,6 @@
 /*****************************************************************************/
 /* Home: Style */
 /*****************************************************************************/
-.home {
-}
-#homepage_header {
-	background-color: #3B5998;
-	height: 5em;
-	/*line-height: 5em;*/
-	width: 100%;
-	color: white;
-}
-header input {
-	width: 144px;
-	color: black;
-}
-header button {
-	color: black;
-}
-.logo {
-	/*margin-left: 15%;
-	padding-top: .8em;
-	float: left;*/
-	float: left;
-	margin-left: 16.5%;
-}
-#email {
-	position: absolute;
-	margin-top: 1em;
-	top:0;
-	right: 45.5em;
-}
-#password {
-	position: absolute;
-	margin-top: 1em;
-	top:0;
-	right: 35.5em;
-}
-#login {
-	position: absolute;
-	margin-top: 1.75em;
-	top:0;
-	right: 26.5em;
-}
-#login_form {
-	margin-right: 20%;
-}
 #body_left {
 	width: 50%;
 	float: left;
@@ -60,11 +16,14 @@ header button {
 	margin-top: .5em;
 	margin-bottom: .5em;
 }
+#body_right .form-control {
+	display: inline;
+}
 #fname_field {
-	width: 174px;
+	width: 178px;
 }
 #lname_field {
-	width: 174px;
+	width: 178px;
 }
 #email_field {
 	width: 362px;
