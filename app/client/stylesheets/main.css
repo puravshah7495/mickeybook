@@ -31,6 +31,14 @@ header button {
 	float: left;
 	margin-left: 16.5%;
 }
+#site_icon, #site_icon:focus, #site_icon:active {
+	margin-top: 10px;
+	margin-left: 255px;
+	height: 28px;
+	width: 28px;
+	outline: none;
+}
+
 #email {
 	position: absolute;
 	margin-top: 1em;
@@ -56,11 +64,9 @@ header button {
 .dropdown-toggle#dropdown-master:hover {
 	background-color: #3B5998;
 }
-
 .caret#dropdown-master:hover {
 	border-top: 7px solid #CCCCCC;
 }
-
 h1 {
 	margin: 0;
 }

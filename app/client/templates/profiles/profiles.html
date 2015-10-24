@@ -29,13 +29,57 @@
 
 <template name="Timeline">
 	<div id="body_info">
-		<div id="timeline_about" class="box">
-			<p>Studies BME at <a href="#">Stony Brook University</a></p><br>
-			<p>Lives in <a href="#">Patchogue, New York</a></p><br>
-			<p>Illegal Immigrant from <a href="#">India</a></p><br>
-			<p>Pronounces name May-tick-quoo-mare Ay-hire</p>
+		<div id="timeline_about" class="box side_box">
+			<div class="side_box_inner">
+				<p>Studies BME at <a href="#">Stony Brook University</a></p><br>
+				<p>Lives in <a href="#">Patchogue, New York</a></p><br>
+				<p>Illegal Immigrant from <a href="#">India</a></p><br>
+				<p>Pronounces name May-tick-quoo-mare Ay-hire</p>
+			</div>
 		</div>
-		&nbsp;
+		<div id="timeline_friends" class="box side_box">
+			<div class="blue_box side_box_head">
+				<p>Friends <span class="count">&middot;</span> <span class="count">NaN</span></p>
+			</div>
+			<div class="side_box_friends">
+				<table>
+					<tr>
+						<td>
+							<img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Portrait_Gandhi.jpg" class="friend_img"/>
+						</td>
+						<td>
+							<img src="http://www.history.co.uk/sites/default/files/bios/adolf-hitler-225x300.jpg" class="friend_img" />
+						</td>
+						<td>
+							<img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d4/Mickey_Mouse.png/220px-Mickey_Mouse.png"
+								class="friend_img"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="https://www.facebook.com/profile.php?id=100000789274105">
+								<img src="/purav.jpg" class="friend_img" />
+							</a>
+						</td>
+						<td>
+							<img src="http://static4.businessinsider.com/image/55918a4b6da811695ab77f22-480/rtx1gzco.jpg" class="friend_img" />
+						</td>
+						<td>
+							<img src="https://pbs.twimg.com/profile_images/541473912555442177/m00Dc9H6_400x400.jpeg" class="friend_img" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img src="http://www.stonybrook.edu/commcms/provost/images/newhires/DRubenstein.jpg" class="friend_img" />
+						</td>
+						<td>
+							<img src="http://vignette2.wikia.nocookie.net/community-sitcom/images/8/8e/Annie's_Boobs.jpg/revision/latest?cb=20130206104834"
+							class="friend_img"/>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
 	</div>
 	<div id="body_posts">
 		<div class="box">
@@ -48,17 +92,19 @@
 			<div class="post box">
 				<div class="post_head">
 					<p>{{username postedBy}} <span class="glyphicon glyphicon-play"></span> Mickey Ahir</p>
-					<div class="dropdown post_dropdown pull-right" >
-					  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-					    <span class="glyphicon glyphicon-chevron-down"></span>
-					  </button>
-					  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-					    <li><a href="#">Edit Post</a></li>
-					    <li><a href="#">Change Date</a></li>
-							<li role="separator" class="divider"></li>
-					    <li><a href="#" id="delete_post">Delete</a></li>
-					  </ul>
-					</div>
+					{{#if postOwner postedBy}}
+						<div class="dropdown post_dropdown pull-right" >
+						  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						    <span class="glyphicon glyphicon-chevron-down"></span>
+						  </button>
+						  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						    <li><a href="#">Edit Post</a></li>
+						    <li><a href="#">Change Date</a></li>
+								<li role="separator" class="divider"></li>
+						    <li><a href="#" id="delete_post">Delete</a></li>
+						  </ul>
+						</div>
+					{{/if}}
 				</div>
 				<div class="post_body">
 					<p>{{message}}</p>
@@ -68,9 +114,9 @@
 					<a href="#"><span class="glyphicon glyphicon-thumbs-up"></span> Mickey</a>
 					<a href="#"><span class="glyphicon glyphicon-thumbs-down"></span> Mickey</a>
 				</div>
-				<div class="reply">
-					<textarea rows="1" cols="35" class="reply_input"></textarea>
-				</div>
+			</div>
+			<div class="reply box">
+				<textarea rows="1" cols="35" class="reply_input"></textarea>
 			</div>
 		{{/each}}
 	</div>

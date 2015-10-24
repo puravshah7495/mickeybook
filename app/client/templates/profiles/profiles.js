@@ -18,8 +18,10 @@ Template.Timeline.events({
 	},
 
 	'click #delete_post': function(event, x, y) {
-		console.log(x);
-		console.log(y);
+		post = this;
+		if (post) {
+			Posts.remove({_id: this._id});
+		}
 		return false;
 	}
 });
@@ -45,6 +47,9 @@ Template.Timeline.helpers({
 	username: function(id) {
 		var user = Meteor.users.findOne({_id: id});
 		return user.profile.firstName + " " + user.profile.lastName;
+	},
+	postOwner: function(id) {
+		return Meteor.userId() === id;
 	}
 });
 /*****************************************************************************/
