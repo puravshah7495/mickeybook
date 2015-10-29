@@ -11,8 +11,18 @@ Router.route('/', {
   where: 'client'
 });
 
-Router.onBeforeAction(function() {
-  if (!Meteor.user()) {
+Router.route('/login', {
+  name: 'login',
+  controller: 'LoginController',
+  action : 'action',
+  where: 'client'
+})
+
+Router.onBeforeAction(function(name) {
+  console.log(name)
+  if(name.url == '/login' && !Meteor.user()) {
+    this.next();
+  } else if (!Meteor.user()) {
     this.render('Home');
   } else {
     this.next();

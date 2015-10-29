@@ -1,0 +1,15 @@
+/*****************************************************************************/
+/* Login: Style */
+/*****************************************************************************/
+.login {
+}
+
+#email input {
+  border: 1px solid red;
+  border-radius: 2px;
+}
+
+#password input {
+  border:1px solid red;
+  border-radius: 2px;
+}

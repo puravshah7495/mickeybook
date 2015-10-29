@@ -12,6 +12,7 @@ Template.MasterLayout.events({
     Meteor.loginWithPassword(email, password, function(error) {
       if (error) {
         console.log(error);
+        Router.go('/login');
       } else {
 				Accounts.sendVerificationEmail(Meteor.userId());
         Router.go('/');
